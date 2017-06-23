@@ -33,3 +33,8 @@ void Administrador::setSueldo(double tsueldo)
 {
 	sueldo=tsueldo;
 }
+
+string Administrador::getTipoPersona()
+{
+	return "Administrador";
+}

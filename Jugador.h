@@ -24,5 +24,7 @@ class Jugador : public Personas
 
 		double getMonto();
 		void setMonto(double);
+
+		string getTipoPersona();
 };
 #endif

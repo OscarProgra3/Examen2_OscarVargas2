@@ -24,5 +24,7 @@ class Administrador : public Personas
 
 	double getSueldo();
 	void setSueldo(double);	
+
+	string getTipoPersona();
 };
 #endif

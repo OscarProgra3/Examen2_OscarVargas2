@@ -35,3 +35,8 @@ void Personas::setId(string tid)
 {
 	id=tid;
 }
+
+string Personas::getTipoPersona()
+{
+	return "";
+}

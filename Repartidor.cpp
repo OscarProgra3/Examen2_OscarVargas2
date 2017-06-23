@@ -34,3 +34,8 @@ void Repartidor::setBaraja(Barajas* tbaraja)
 {
 	baraja=tbaraja;
 }
+
+string Repartidor::getTipoPersona()
+{
+	return "Repartidor";
+}

@@ -60,7 +60,7 @@ int main()
 				cout<<endl<<"Ingrese los años de experiencia laboral: ";
 				cin>>anios;
 
-				int opcrango=9;
+				int opcrango;
 				while(opcrango!=4)
 				{
 					cout<<endl<<"Rango\n1.-Gerente Tiempo Completo\n2.-Gerente Medio-Tiempo\n3.-Gerente General\n4.-Salir\ningrese su pcion: ";
@@ -69,14 +69,17 @@ int main()
 					if (opcrango==1)
 					{
 						rango="Gerente Tiempo Completo";
+						opcrango=4;
 					}
 					if(opcrango==2)
 					{
 						rango="Gerente Medio-Tiempo";
+						opcrango=4;
 					}
 					if (opcrango==3)
 					{
 						rango="Gerente General";
+						opcrango=4;
 					}
 				}//fin opcrango
 
@@ -102,14 +105,17 @@ int main()
 					if (opcdificultad==1)
 					{
 						dificultad="Dificil";
+						opcdificultad=4;
 					}
 					if(opcdificultad==2)
 					{
 						dificultad="Intermedio";
+						opcdificultad=4;
 					}
 					if (opcdificultad==3)
 					{
 						dificultad="Facil";
+						opcdificultad=4;
 					}
 				}//fin opcdificultad
 
@@ -167,8 +173,28 @@ int main()
 			
 		}//fin agregando personas
 
-		if (rep==2)//login
+		if (resp==2)//login
 		{
+
+			string username,idactual;
+
+			cout<<endl<<"Ingrese Nombre de usuario: ";
+			cin>>username;
+
+			cout<<endl<<"ingrese el id: ";
+			cin>>idactual;
+
+				for (int i = 0; i < listapersonas.size(); ++i)
+				{
+					if (listapersonas.at(i)->getNombre()==username && listapersonas.at(i)->getId()==idactual)
+					{
+						if (listapersonas.at(i)->getTipoPersona()=="Administrador")
+						{
+							cout<<endl<<"-----------BIENVENIDO ADMINISTRADOR----------------"<<endl;
+						}
+					}
+				}
+						
 			
 		}//fin login
 

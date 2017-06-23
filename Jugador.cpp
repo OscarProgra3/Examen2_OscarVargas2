@@ -34,3 +34,8 @@ void Jugador::setMonto(double tmonto)
 {
 	monto=tmonto;
 }
+
+string Jugador::getTipoPersona()
+{
+	return "Jugador";
+}

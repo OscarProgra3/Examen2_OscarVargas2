@@ -26,6 +26,8 @@ class Repartidor : public Personas
 
 		Barajas* getBaraja();
 		void setBaraja(Barajas*);
+
+		string getTipoPersona();
 	
 };
 #endif

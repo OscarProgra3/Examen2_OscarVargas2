@@ -27,5 +27,7 @@ class Personas
 		string getId();
 		void setId(string);
 
+		virtual string getTipoPersona();		
+
 };
 #endif
