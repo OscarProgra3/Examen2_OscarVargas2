@@ -191,6 +191,18 @@ int main()
 						if (listapersonas.at(i)->getTipoPersona()=="Administrador")
 						{
 							cout<<endl<<"-----------BIENVENIDO ADMINISTRADOR----------------"<<endl;
+							int opcmesa=9;
+							while(opcmesa!=4)
+							{	
+								cout<<endl<<"¿Que es lo que desea realizar?\n1.-Agregar Mesas\n2.-Modificar mesas\n3.-Eliminar mesas\n4.-Salir\nIngrese su opcion: ";
+								cin>>opcmesa;
+								if (opcmesa==1)//agregar mesa
+								{
+									/* code */
+								}
+
+							}
+
 						}
 					}
 				}
