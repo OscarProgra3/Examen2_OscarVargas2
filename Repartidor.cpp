@@ -1,6 +1,6 @@
 #include "Repartidor.h"
 
-Repartidor::Repartidor(string pnombre, int pedad,int pid, string pdificultad,double pdinero,Barajas* pbaraja): Personas(pnombre, pedad, pid)
+Repartidor::Repartidor(string pnombre, int pedad,string pid, string pdificultad,double pdinero,Barajas* pbaraja): Personas(pnombre, pedad, pid)
 {
 	dificultad=pdificultad;
 	dinero=pdinero;

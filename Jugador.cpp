@@ -1,6 +1,6 @@
 #include "Jugador.h"
 
-Jugador::Jugador(string pnombre, int pedad,int pid,string pprocedencia, string papodo, double pmonto) : Personas(pnombre, pedad, pid)
+Jugador::Jugador(string pnombre, int pedad,string pid,string pprocedencia, string papodo, double pmonto) : Personas(pnombre, pedad, pid)
 {
 	procedencia=pprocedencia;
 	apodo=papodo;

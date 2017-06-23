@@ -14,7 +14,7 @@ class Jugador : public Personas
 		double monto;
 
 	public:
-		Jugador(string,int,int,string, string, double);
+		Jugador(string,int,string,string, string, double);
 		
 		string getProcedencia();
 		void setProcedencia(string);

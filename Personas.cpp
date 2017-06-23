@@ -1,6 +1,6 @@
 #include "Personas.h"
 
-Personas::Personas(string pnombre,int pedad,int pid)
+Personas::Personas(string pnombre,int pedad,string pid)
 {
 	nombre=pnombre;
 	edad=pedad;
@@ -27,11 +27,11 @@ void Personas::setEdad(int tedad)
 	edad=tedad;
 }
 
-int Personas::getId()
+string Personas::getId()
 {
 	return id;
 }
-void Personas::set(int tid)
+void Personas::setId(string tid)
 {
 	id=tid;
 }

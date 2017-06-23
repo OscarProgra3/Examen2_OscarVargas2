@@ -10,12 +10,12 @@ class Personas
 	protected:
 		string nombre;
 		int edad;
-		int id;
+		string id;
 
 
 
 	public:
-		Personas(string,int,int);
+		Personas(string,int,string);
 		//~Personas();
 
 		string getNombre();
@@ -24,8 +24,8 @@ class Personas
 		int getEdad();
 		void setEdad(int);
 
-		int getId();
-		void set(int);
+		string getId();
+		void setId(string);
 
 };
 #endif

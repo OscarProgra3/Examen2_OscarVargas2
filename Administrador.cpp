@@ -1,6 +1,6 @@
 #include "Administrador.h"
 
-Administrador::Administrador(string pnombre,int pedad,int pid,int panios,string prango,double psueldo) : Personas(pnombre, pedad, pid)
+Administrador::Administrador(string pnombre,int pedad,string pid,int panios,string prango,double psueldo) : Personas(pnombre, pedad, pid)
 {
 	anios=panios;
 	rango=prango;

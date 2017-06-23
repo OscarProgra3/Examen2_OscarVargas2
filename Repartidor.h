@@ -16,7 +16,7 @@ class Repartidor : public Personas
 
 
 	public:
-		Repartidor(string, int,int, string,double,Barajas*);
+		Repartidor(string, int,string, string,double,Barajas*);
 
 		string getDificultad();
 		void setDificultas(string);
