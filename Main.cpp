@@ -91,36 +91,91 @@ int main()
 			{
 				string dificultad;
 				double dinero;
-				Barajas* baraja;
-
+				vector<Carta*> cartas;
 				
 				int opcdificultad=9;
 				while(opcdificultad!=4)
 				{
-					cout<<endl<<"Dificultad\n1.-Gerente Tiempo Completo\n2.-Gerente Medio-Tiempo\n3.-Gerente General\n4.-Salir\ningrese su pcion: ";
+					cout<<endl<<"Dificultad\n1.-Dificil\n2.-Intermedio\n3.-Facil\n4.-Salir\ningrese su pcion: ";
 					cin>>opcdificultad;
 
 					if (opcdificultad==1)
 					{
-						dificultad="Gerente Tiempo Completo";
+						dificultad="Dificil";
 					}
 					if(opcdificultad==2)
 					{
-						dificultad="Gerente Medio-Tiempo";
+						dificultad="Intermedio";
 					}
 					if (opcdificultad==3)
 					{
-						dificultad="Gerente General";
+						dificultad="Facil";
 					}
-				}//fin opcrango	
+				}//fin opcdificultad
+
+				cout<<endl<<"Ingrese la cantidad de dinero: ";
+				cin>>dinero;
+
+				//baraja
+				for (int i = 2; i <=14; ++i)
+				{
+					cartas.push_back(new Carta(i,"♠","negro"));
+				}
+
+				for (int i = 2; i <=14; ++i)
+				{
+					cartas.push_back(new Carta(i,"♥","rojo"));
+				}
+				for (int i = 2; i <=14; ++i)
+				{
+					cartas.push_back(new Carta(i,"♣","negro"));
+				}
+				for (int i = 2; i <=14; ++i)
+				{
+					cartas.push_back(new Carta(i,"♦","rojo"));
+				}
+
+				Barajas* baraja=new Barajas(cartas);
+
+				listapersonas.push_back(new Repartidor(nombre,edad,id,dificultad,dinero,baraja));
+				cout<<endl<<"Repartidor agregado exitosamente"<<endl<<endl;
+				
+
 			}	//fin agregar repartidores
 			
 			if (opcagregar==3)//agregar jugadores
 			{
-					
+				string procedencia,apodo;
+				double monto;
+
+				cout<<endl<<"Ingrese la procedencia: ";
+				cin>>procedencia;
+				
+				cout<<endl<<"Ingrese el apodo: ";
+				cin>>apodo;
+
+				cout<<endl<<"ingrese el monto";
+				cin>>monto;
+
+
+
+
+				listapersonas.push_back(new Jugador(nombre,edad,id,procedencia,apodo,monto));
+				cout<<endl<<"Jugador agregado exitosamente"<<endl<<endl;
+
 			}	//fin agregar jugadores
 			
 		}//fin agregando personas
+
+		if (rep==2)//login
+		{
+			
+		}//fin login
+
+
+
+
+
 	}
 
 	return 0;
