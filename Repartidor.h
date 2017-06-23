@@ -22,7 +22,7 @@ class Repartidor : public Personas
 		void setDificultas(string);
 
 		double getDinero();
-		void set Dinero(double);
+		void setDinero(double);
 
 		Barajas* getBaraja();
 		void setBaraja(Barajas*);

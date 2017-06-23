@@ -14,7 +14,7 @@ class Administrador : public Personas
 		double sueldo;
 
 	public:
-	Administrador(string, int, int int,string,double);
+	Administrador(string, int, int, int,string,double);
 
 	int getAnios();
 	void setAnios(int);

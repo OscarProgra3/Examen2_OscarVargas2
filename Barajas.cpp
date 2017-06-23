@@ -2,7 +2,7 @@
 
 Barajas::Barajas(vector<Carta*> pcartas)
 {
-	cartas=pcartas
+	cartas=pcartas;
 }
 		
 vector<Carta*> Barajas::getCartas()

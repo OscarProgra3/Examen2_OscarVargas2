@@ -1,4 +1,5 @@
 #include <string>
+#include "Personas.h"
 
 #ifndef JUGADOR_H
 #define JUGADOR_H
@@ -13,7 +14,7 @@ class Jugador : public Personas
 		double monto;
 
 	public:
-		Jugador(string, string, double);
+		Jugador(string,int,int,string, string, double);
 		
 		string getProcedencia();
 		void setProcedencia(string);

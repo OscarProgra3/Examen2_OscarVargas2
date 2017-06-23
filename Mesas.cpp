@@ -6,20 +6,20 @@ Mesas::Mesas(int pnumero,string ptipo)
 	tipo=ptipo;
 }
 		
-int getNumero()
+int Mesas::getNumero()
 {
 	return numero;
 }
-void setNumero(int tnumero)
+void Mesas::setNumero(int tnumero)
 {
 	numero=tnumero;
 }
 
-string getTipo()
+string Mesas::getTipo()
 {
 	return tipo;
 }
-void setTipo(string ttipo)
+void Mesas::setTipo(string ttipo)
 {
 	tipo=ttipo;
 }
