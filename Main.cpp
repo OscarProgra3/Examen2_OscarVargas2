@@ -15,6 +15,7 @@ int main()
 {
 
 	vector<Personas*> listapersonas;
+	vector<Mesas*> listaMesas;
 
 	int resp=9;
 	while(resp!=3)
@@ -192,14 +193,54 @@ int main()
 						{
 							cout<<endl<<"-----------BIENVENIDO ADMINISTRADOR----------------"<<endl;
 							int opcmesa=9;
+
+
+
 							while(opcmesa!=4)
 							{	
 								cout<<endl<<"¿Que es lo que desea realizar?\n1.-Agregar Mesas\n2.-Modificar mesas\n3.-Eliminar mesas\n4.-Salir\nIngrese su opcion: ";
 								cin>>opcmesa;
 								if (opcmesa==1)//agregar mesa
 								{
-									/* code */
-								}
+									if (listapersonas.size()==0)
+									{
+										cout<<endl<<"LO SENTIMOS, NO HAY PERSONAS PARA PODER CREAR LAS MESAS"<<endl;
+									}else
+									{
+
+										string tipomesa;
+										int nmesa;///numero mesa
+										cout<<endl<<"Igrese el numero de la mesa: ";
+										cin>>nmesa;
+
+										int opctipomesa;
+										while(opctipomesa!=4)
+										{
+											cout<<endl<<"Tipo de mesa\n1.-V.I.P.\n2.-Clasica\n3.-Viajero\n4.-Salir\ningrese su pcion: ";
+											cin>>opctipomesa;
+
+											if (opctipomesa==1)
+											{
+												tipomesa="V.I.P.";
+												opctipomesa=4;
+											}
+											if(opctipomesa==2)
+											{
+												tipomesa="Clasica";
+												opctipomesa=4;
+											}
+											if (opctipomesa==3)
+											{
+												tipomesa="Viajero";
+												opctipomesa=4;
+											}
+										}//fin opctipomesa
+										
+										listaMesas.push_back(new Mesas(nmesa,tipomesa));
+
+									}
+
+								}//fin agregar mesa
 
 							}
 
