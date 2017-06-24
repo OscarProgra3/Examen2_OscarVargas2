@@ -346,7 +346,12 @@ int main()
 									cout<<"el numero de su mesa es el : "<<listaMesas.at(j)->getNumero()<<endl;
 									cout<<"el tipo de su mesa es : "<<listaMesas.at(j)->getTipo()<<endl;
 									cout<<"el repartidor  de su mesa es : "<<listaMesas.at(j)->getRepartidor()->getNombre()<<endl;
-						
+									
+									cout<<"QUE EMPIEZE EL JUEGO"<<endl;
+
+									
+
+
 								}
 							}
 						}//fin login jugador
