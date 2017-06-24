@@ -6,6 +6,9 @@
 #include "Barajas.h"
 #include "Carta.h"
 
+#include <stdio.h>
+#include <stdlib.h>
+
 #include <vector>
 #include <iostream>
 #include <string>
@@ -18,7 +21,8 @@ void listarJugadores(vector<Personas*> ListaJ);
 
 int main()
 {
-
+	srand(time(NULL));
+	
 	vector<Personas*> listapersonas;
 	vector<Mesas*> listaMesas;
 
@@ -349,6 +353,20 @@ int main()
 									
 									cout<<"QUE EMPIEZE EL JUEGO"<<endl;
 
+									cout<<endl<<"Ingrese la apuesta: ";
+									double apuesta;
+									cin>>apuesta;
+
+									int r;
+									r = rand() % 52 + 2;
+
+									vector<Carta*> cartasactuales;
+									cartasactuales=listaMesas.at(j)->getRepartidor()->getBaraja()->getCartas();
+
+									cout <<endl<< "su primera carta es: "<<cartasactuales.at(r)->getColor()<<cartasactuales.at(r)->getSimbolo()<<cartasactuales.at(r)->getValor();
+									cout <<endl<< "su segunda carta es: "<<cartasactuales.at(r)->getColor()<<cartasactuales.at(r)->getSimbolo()<<cartasactuales.at(r)->getValor();
+
+									cout<<endl<<"Gracias por participar"<<endl;
 									
 
 
