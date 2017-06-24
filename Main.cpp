@@ -251,14 +251,20 @@ int main()
 										cout<<"Numero de jugador a escoger: ";
 										cin>>jugadorescogido;
 
+										Repartidor* repartidorm= dynamic_cast<Repartidor*>(listapersonas.at(repartidorescogido));
+										Jugador* jugadorm=dynamic_cast<Jugador*>(listapersonas.at(jugadorescogido));
 
-
-										listaMesas.push_back(new Mesas(nmesa,tipomesa,listapersonas.at(jugadorescogido),listapersonas.at(repartidorescogido)));
-
-
+										listaMesas.push_back(new Mesas(nmesa,tipomesa,jugadorm,repartidorm));
+										cout<<endl<<"MESA CREADA EXITOSAMENTE"<<endl;
 									}
 
 								}//fin agregar mesa
+								if (opcmesa==2)
+								{
+									listarMesas(listaMesas);
+
+
+								}
 
 							}
 
