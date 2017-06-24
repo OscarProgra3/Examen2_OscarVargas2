@@ -340,16 +340,13 @@ int main()
 
 							for (int j = 0; j < listaMesas.size(); ++j)
 							{
-									if (listapersonas.at(i)->getNombre()==listaMesas.at(j)->getJugador()->getNombre())
-									{
-										cout<<endl<<"BIENVENIDO "<<listapersonas.at(i)->getNombre()<<endl;
-										cout<<"el numero de su mesa es el : "<<listaMesas.at(j)->getNumero()<<endl;
-										cout<<"el tipo de su mesa es : "<<listaMesas.at(j)->getTipo()<<endl;
-										cout<<"el repartidor  de su mesa es : "<<listaMesas.at(j)->getRepartidor()->getNombre()<<endl;
-										
-
-									}
-											
+								if (listapersonas.at(i)->getNombre()==listaMesas.at(j)->getJugador()->getNombre())
+								{
+									cout<<endl<<"BIENVENIDO "<<listapersonas.at(i)->getNombre()<<endl;
+									cout<<"el numero de su mesa es el : "<<listaMesas.at(j)->getNumero()<<endl;
+									cout<<"el tipo de su mesa es : "<<listaMesas.at(j)->getTipo()<<endl;
+									cout<<"el repartidor  de su mesa es : "<<listaMesas.at(j)->getRepartidor()->getNombre()<<endl;
+						
 								}
 							}
 						}//fin login jugador
