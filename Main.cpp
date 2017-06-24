@@ -259,16 +259,85 @@ int main()
 									}
 
 								}//fin agregar mesa
-								if (opcmesa==2)
+
+
+								if (opcmesa==2)//modificar mesa
 								{
 									listarMesas(listaMesas);
+									int opcmodificar;
+									cout<<"Numero de mesa a modificar: ";
+									cin>>opcmodificar;
+
+									string tipomesam;
+										int nmesam;///numero mesa
+										cout<<endl<<"Igrese el numero de la mesa: ";
+										cin>>nmesam;
+
+										
+
+										int opctipomesam;
+										while(opctipomesam!=4)
+										{
+											cout<<endl<<"Tipo de mesa\n1.-V.I.P.\n2.-Clasica\n3.-Viajero\n4.-Salir\ningrese su pcion: ";
+											cin>>opctipomesam;
+
+											if (opctipomesam==1)
+											{
+												tipomesam="V.I.P.";
+												opctipomesam=4;
+											}
+											if(opctipomesam==2)
+											{
+												tipomesam="Clasica";
+												opctipomesam=4;
+											}
+											if (opctipomesam==3)
+											{
+												tipomesam="Viajero";
+												opctipomesam=4;
+											}
+										}//fin opctipomesa
+										
+										listarRepartidores(listapersonas);
+										int repartidorescogidom;
+										cout<<"Numero de repartidor a escoger: ";
+										cin>>repartidorescogidom;
+
+										listarJugadores(listapersonas);
+										int jugadorescogidom;
+										cout<<"Numero de jugador a escoger: ";
+										cin>>jugadorescogidom;
+
+										Repartidor* repartidormm= dynamic_cast<Repartidor*>(listapersonas.at(repartidorescogidom));
+										Jugador* jugadormm=dynamic_cast<Jugador*>(listapersonas.at(jugadorescogidom));
+
+										Mesas* mesat=new Mesas(nmesam,tipomesam,jugadormm,repartidormm);
+
+										listaMesas.at(opcmodificar)=mesat;
+										cout<<endl<<"MESA MODIFICADA EXITOSAMENTE"<<endl;
+									
 
 
-								}
+								}//fin modificar mesa
+								if (opcmesa==3)//eliminarmesa
+								{
+									listarMesas(listaMesas);
+									int opceliminar;
+									cout<<"Numero de mesa a eliminar: ";
+									cin>>opceliminar;
+									listaMesas.erase(listaMesas.begin()+opceliminar);
+									cout<<endl<<"MESA ELIMINADA CON EXITO "<<endl;
+									
+								}//fin eliminar mesa
+
 
 							}
 
-						}
+						}//fin de login administrador
+						if (listapersonas.at(i)->getTipoPersona()=="Jugador")//login jugador
+						{
+							
+						}//fin login jugador
 					}
 				}
 						
