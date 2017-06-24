@@ -11,6 +11,11 @@
 #include <string>
 
 
+void listarMesas(vector<Mesas*> ListaM);
+void listarRepartidores(vector<Personas*> ListaT);
+void listarJugadores(vector<Personas*> ListaJ);
+
+
 int main()
 {
 
@@ -236,7 +241,20 @@ int main()
 											}
 										}//fin opctipomesa
 										
-										listaMesas.push_back(new Mesas(nmesa,tipomesa));
+										listarRepartidores(listapersonas);
+										int repartidorescogido;
+										cout<<"Numero de repartidor a escoger: ";
+										cin>>repartidorescogido;
+
+										listarJugadores(listapersonas);
+										int jugadorescogido;
+										cout<<"Numero de jugador a escoger: ";
+										cin>>jugadorescogido;
+
+
+
+										listaMesas.push_back(new Mesas(nmesa,tipomesa,listapersonas.at(jugadorescogido),listapersonas.at(repartidorescogido)));
+
 
 									}
 
@@ -258,5 +276,52 @@ int main()
 	}
 
 	return 0;
+}
+
+
+
+void listarRepartidores(vector<Personas*> ListaT)
+{
+	cout<<endl<<"----------LISTA DE LOS REPARTIDORES---------------------";
+	for (int i = 0; i < ListaT.size(); ++i)
+	{
+		if (ListaT.at(i)->getTipoPersona()=="Repartidor")
+		{
+				cout << endl<<"        Numero del Repartidor: " << (i) << endl;
+			cout << endl<<"N-ombre del repartidor: "<< ListaT.at(i)->getNombre()<<endl;
+			cout <<endl<< "----------------------------------------------" << endl;
+		}
+		
+	}
+}
+
+
+
+void listarJugadores(vector<Personas*> ListaJ)
+{
+	cout<<endl<<"----------LISTA DE LOS JUGADORE---------------------";
+	for (int i = 0; i < ListaJ.size(); ++i)
+	{
+		if (ListaJ.at(i)->getTipoPersona()=="Jugador")
+		{
+				cout << endl<<"        Numero del jugador: " << (i) << endl;
+			cout << endl<<"Nombre del repartidor: "<< ListaJ.at(i)->getNombre()<<endl;
+			cout <<endl<< "----------------------------------------------" << endl;
+		}
+		
+	}
+}
+
+void listarMesas(vector<Mesas*> ListaM)
+{
+	cout<<endl<<"----------LISTA DE LAS MESAS---------------------";
+	for (int i = 0; i < ListaM.size(); ++i)
+	{
+				cout << endl<<"        Numero de opcion de la mesa: " << (i) << endl;
+			cout << endl<<"Numero asignado : "<< ListaM.at(i)->getNumero()<<endl;
+			cout << endl<<"Tipo de mesa : "<< ListaM.at(i)->getTipo()<<endl;
+			
+			cout <<endl<< "----------------------------------------------" << endl;
+	}
 }
 

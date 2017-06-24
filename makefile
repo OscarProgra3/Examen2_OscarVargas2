@@ -22,7 +22,7 @@ Barajas.o: Barajas.cpp Barajas.h Carta.h
 Carta.o: Carta.h Carta.h
 	g++ -c Carta.cpp
 
-Mesas.o: Mesas.cpp Mesas.h
+Mesas.o: Mesas.cpp Mesas.h Repartidor.h Jugador.h 
 	g++ -c Mesas.cpp
 
 clean:	
